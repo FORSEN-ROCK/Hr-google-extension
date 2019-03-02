@@ -1,0 +1,23 @@
+<html !DOCTYPE html>
+    <link href="static/css/hr_style.css" rel="stylesheet">
+    <body>
+        <div class="many-to-many">
+            <form>
+                <fieldset>
+                <legend>1</legend>
+                    <label for="vacancy-id" class="long-label">Открытые вакансии</label>
+                    <label for="choices-id" class="long-label">Открытые вакансии</label>
+                    <input class="field long" type="search" name="search_vac">
+                    <input class="field long" type="search" name="search_choices">
+                    <select name="vacancy[]" id="vacancy-id" multiple class="field long tall">
+                        <option value="1">Специалист по взысканию</option>
+                    </select>
+                    <select name="vacancy_choices[]" id="choices-id" multiple class="field long tall">
+                    </select>
+                </fieldset>
+                <input type="button" name="_add_vacancies" id="add-vac-id" value="Выбрать">
+                <input type="button" name="_cancel_vacancies" id="cancel-vac-id" value="Отмена">
+            </form>
+        </div>
+    </body>
+</html>

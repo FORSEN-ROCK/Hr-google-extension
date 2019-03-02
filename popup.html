@@ -1,0 +1,18 @@
+﻿<html !DOCTYPE html>
+    <link href="static/css/hr_style.css" rel="stylesheet">
+    <script src="script/popup_actions.js"></script>
+    <meta charset="utf-8">
+    <body class="popup">
+        <p hidden id="error-message-id" class="error">Неправильное имя пользователя или пароль</p>
+        <p hidden id="error-empty-id" class="error">Поля обязательны для звполнения</p>
+        <form action="http://srvrecrutplus01.sentinelintra.net/api-token-auth/" method="POST" name="authForm">
+            <label for="log-id">Имя пользователя</label>
+            <input type="text" name="username" id="log-id" class="field">
+            <label for="pas-id">Пароль</label>
+            <input type="password" name="password" id="pas-id" class="field">
+            <input type="button" value="Войти" id="send-id">
+        </form>
+        <a href="" hidden id="my-cand-id">Мои кандидаты</a>
+        <a href="" id="exit-id" hidden>Выход</a>
+    </body>
+</html>

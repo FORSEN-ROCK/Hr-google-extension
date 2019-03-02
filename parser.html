@@ -1,0 +1,102 @@
+﻿<html !DOCTYPE html>
+    <head>
+        <title>Сохранение резюме</title>
+        <link href="static/css/hr_style.css" rel="stylesheet">
+        <script src="script/parse_interface_actions.js"></script>
+        <meta charset="utf-8">
+    </head>
+    <body class="candidate-info">
+        <nav>
+            <div>
+                <img src="static/img/logo.png">            
+            </div>
+        </nav>
+        <main>
+            <div class="parser-page">
+                <form name="resume">
+                    <fieldset class="group-field ">
+                        <legend>Основная информация</legend>
+                        <div class="edit-fields" id="info-fields-id">
+                            <input type="hidden" name="resume_id">
+                            <input type="text" name="resume-title" id="input-title-id" class="field resume-name">
+                            <span id="span-title-id" tabindex="1" class="span-row">Название резюме</span>
+                            <table class="candidate-info" id="fields-id">
+                                <tr>
+                                    <td><label for="first-name-id">Имя</label></td>
+                                    <td><label for="last-name-id">Фамилия</label></td>
+                                    <td><label for="middle-name-id">Отчество</label></td>
+                                    <td><label for="birthday-id">Дата рождения</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" name="first_name" id="first-name-id" class="field" required></td>
+                                    <td><input type="text" name="last_name" id="last-name-id" class="field" required></td>
+                                    <td><input type="text" name="middle_name" id="middle-name-id" class="field"></td>
+                                    <td><input type="date" name="birthday" id="birthday-id" class="field"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="sex-id">Пол</label></td>
+                                    <td><label for="city-id">Город</label></td>
+                                    <td><label for="phone-id">Телефон</label></td>
+                                    <td><label for="email-id">Электронная почта</label></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <select name="sex" id="sex-id" class="field" required>
+                                            <option value="М">Мужской</option>
+                                            <option value="Ж">Женский</option>
+                                        </select>
+                                    </td>
+                                    <td><input type="text" name="city" id="city-id" list="city-list-id" class="field" required></td>
+                                    <datalist id="city-list-id"></datalist>
+                                    <td><input type="tel" name="phone" id="phone-id" class="field" required></td>
+                                    <td><input type="email" name="email" id="email-id" class="field" required></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="education-type-id">Образование</label></td>
+                                    <td><label for="length-of-work-id">Стаж работы</label></td>
+                                    <td><label for="having-car-id">Личный автомобиль</label></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="text" name="education" id="education-type-id" class="field"></td>
+                                    <td><input type="text" name="length-of-work" id="length-of-work-id" class="field"></td>
+                                    <td>
+                                        <select name="having_car" id="having-car-id" class="field">
+                                            <option value="Y">Есть</option>
+                                            <option value="N">Нет</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                            <br>
+                            <div class="right">
+                                <input type="button" value="Сохранить" class="but-save" id="button-save-id">
+                            </div>
+                        </div>
+                        <br>
+                    </fieldset>
+                    <fieldset class="group-field ">
+                        <legend>Вакансии</legend>
+                        <label for="vacancy-id" class="long-label">Открытые вакансии</label>
+                        <label for="choices-id" class="long-label">Подходящие вакансии</label>
+                        <div class="conrainer-vac-open">
+                            <input type="text" name="search" class="long search" placeholder="Начните набирать название вакансии" tabindex="-1" id="vacancy-search-id"><br>
+                            <select name="vacancy[]" id="vacancy-id" multiple class="long tall-with-search"></select>
+                        </div>
+                        <select name="vacancy_choices[]" id="choices-id" multiple class="long tall"></select>
+                    </fieldset>
+                    <fieldset class="group-field ">
+                        <legend>Образование</legend>
+                        <div name="education" id="education-id"></div>
+                    </fieldset>
+                    <fieldset class="group-field ">
+                        <legend>Опыт работы</legend>
+                        <div name="experience" id="experience-id"></div>
+                    </fieldset>
+                </from>
+                <div class="detail-view">
+                    <iframe class="frame-iter" id="pre-view-id"></iframe>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
